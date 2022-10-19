@@ -7,10 +7,10 @@ export default function Ueber() {
     modal.showModal();
   }
   return (
-    <div class="ueber">
+    <div className="ueber">
       <h1>ToDos offen</h1>
       <section id="todoOpen">
-        <div class="addTodo">
+        <div className="addTodo">
           <button onClick={toggleModal} id="open-dialog">
             +
           </button>
