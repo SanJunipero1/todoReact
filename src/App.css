@@ -234,23 +234,24 @@
     background-color: #fff;
   }
   
-  /*.button1 {
+  .button1 {
     width: 30px;
     height: 30px;
-    background-image: url(./img/delete.svg);
+    background-image: url(/src/delete.svg);
   }
   .button2 {
     width: 40px;
     height: 40px;
-    background-image: url(./img/check.svg);
+    background-image: url(/src/check.svg);
     margin: 0px 10px;
   }
+ 
   .button3 {
     width: 30px;
     height: 30px;
-    background-image: url(./img/edit.svg);
+    background-image: url(/src/edit.svg);
   }
-  */
+  
   /************* Main Ende *************/
   
   /************* Footer Anfang *************/
