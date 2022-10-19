@@ -1,6 +1,6 @@
 import Header from "./Components/Header/header";
 import "./App.css";
-import Modal from "./Components/Header/modal/modal";
+import Modal from "./Components/Main/Modal";
 import Footer from "./Components/Footer";
 import Main from "./Components/Main";
 
