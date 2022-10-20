@@ -13,20 +13,9 @@ function App() {
     <>
       <div className="main-content">
         <Header />
-<<<<<<< HEAD
         <CreateList />
         Hier Header und Main
         <Main />
-=======
-        <Modal />
-
-        
-       
-        
-
-  < Main />
-
->>>>>>> main
       </div>
 
       <Footer />
