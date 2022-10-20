@@ -20,8 +20,8 @@ function App() {
         <Header />
         <Modal />
 
-        <CreateList  />
-        Hier Header und Main
+        
+       
         
 
   < Main />

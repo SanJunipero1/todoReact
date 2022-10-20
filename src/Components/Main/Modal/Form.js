@@ -1,12 +1,24 @@
 import React from "react";
 import Button from "./Button";
+import H2Div from "../createList/h2div";
+
+
 
 export default function Form() {
+  const listInput = []
   function handleChange(event) {
-    console.log(event.target.value);
+    listInput.push(event.target.value) 
+     console.log(event.target.value);
+     console.log(listInput)
   }
-
+ 
+ 
+ 
   return (
+    
+
+   
+
     <form method="dialog">
       <input
         onChange={handleChange}
@@ -16,6 +28,7 @@ export default function Form() {
       />
       <Button id="submit" type="submit" name={"Submit"} />
       <Button id="cancel" name={"Cancel"} />
-    </form>
+      </form>
+      
   );
 }

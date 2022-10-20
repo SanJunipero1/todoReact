@@ -1,23 +1,22 @@
 import React from "react";
 import Button from "./button";
 import H2 from "./h2";
-
+import listInput from "../Modal/Form";
 
 
 
 
 export default function H2Div(){
-  
-const list =[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
 
+ const listInput= ["Test1","Test2","Test3","Test4","Test5"]
     
     
 return(
-    list.map((zahl) => ( 
+    listInput.map((input) => ( 
         <div className="listItemButton">
        <Button className="button2"/>
         <div className="h2div">
-        <H2 text={zahl}/>
+        <H2 text={input}/>
         </div> 
         <Button className="button3"/>
         <Button className="button1"/>  
