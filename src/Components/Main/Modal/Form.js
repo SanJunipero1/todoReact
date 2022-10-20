@@ -1,32 +1,35 @@
 import React, { useRef } from "react";
 import Button from "./Button";
 
-export default function Form() {
-  const input = useRef(null);
-
+export default function Form({ modalOpen, setModalOpen, input, setInput }) {
+  let inputValue;
   function handleChange(event) {
-    console.log(event.target.value);
+    inputValue = event.target.value;
   }
 
   function submitToDo() {
-    console.log("Submitted!");
+    setInput(inputValue);
+    setModalOpen(false);
+    console.log(input);
   }
   function cancelToDo() {
-    //input.value = "";
-    console.log("cancelBtn works!");
+    inputValue = "";
+    setInput("");
+    setModalOpen(false);
   }
 
   return (
     <form method="dialog">
       <input
-        ref={input}
         onChange={handleChange}
         id="todoTitle"
         type="text"
         placeholder="What's to do?"
       />
-      <Button onCLick={submitToDo} id="submit" type="submit" name={"Submit"} />
-      <Button onClick={cancelToDo} id="cancel" name={"Cancel"} />
+      {/* <Button onCLick={submitToDo} />
+      <Button onCLick={submitToDo} /> */}
+      <Button onClick={submitToDo} text={"Submit"} />
+      <Button onClick={cancelToDo} text={"Cancel"} />
     </form>
   );
 }
