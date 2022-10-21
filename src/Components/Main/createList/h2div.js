@@ -1,12 +1,9 @@
 
-import React from "react";
-import H2 from "./h2";
-import listInput from "../Modal/Form";
+
 import DeleteButton from "./DeleteButton";
 import CheckButton from "./CheckButton";
-
+import EditButton from "./EditButton";
 import React, { useState, useEffect } from "react";
-import Button from "./button";
 import H2 from "./h2";
 import listInput from "../Modal/Form";
 import uuid from "react-uuid";
