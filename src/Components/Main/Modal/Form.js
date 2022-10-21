@@ -3,9 +3,9 @@ import Button from "./Button";
 import H2Div from "../createList/h2div";
 
 export default function Form({ modalOpen, setModalOpen, input, setInput }) {
-  let inputValue;
+  let inputValue = [];
   function handleChange(event) {
-    inputValue = event.target.value;
+    inputValue.push(event.target.value);
   }
 
   function submitToDo() {
@@ -14,8 +14,8 @@ export default function Form({ modalOpen, setModalOpen, input, setInput }) {
     console.log(input);
   }
   function cancelToDo() {
-    inputValue = "";
-    setInput("");
+    // inputValue = "";
+    // setInput("");
     setModalOpen(false);
   }
 

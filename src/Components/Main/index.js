@@ -23,7 +23,7 @@ export default function Main() {
           setModalOpen={setModalOpen}
           setInput={setInput}
         />
-        <TopDiv />
+        <TopDiv input={input} />
         <BotDiv />
       </main>
     </>
