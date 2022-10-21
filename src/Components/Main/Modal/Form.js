@@ -1,24 +1,25 @@
-import React from "react";
+import React, { useRef } from "react";
 import Button from "./Button";
 import H2Div from "../createList/h2div";
 
-
-
-export default function Form() {
-  const listInput = []
+export default function Form({ modalOpen, setModalOpen, input, setInput }) {
+  let inputValue = [];
   function handleChange(event) {
-    listInput.push(event.target.value) 
-     console.log(event.target.value);
-     console.log(listInput)
+    inputValue.push(event.target.value);
   }
- 
- 
- 
+
+  function submitToDo() {
+    setInput(inputValue);
+    setModalOpen(false);
+    console.log(input);
+  }
+  function cancelToDo() {
+    // inputValue = "";
+    // setInput("");
+    setModalOpen(false);
+  }
+
   return (
-    
-
-   
-
     <form method="dialog">
       <input
         onChange={handleChange}
@@ -26,9 +27,10 @@ export default function Form() {
         type="text"
         placeholder="What's to do?"
       />
-      <Button id="submit" type="submit" name={"Submit"} />
-      <Button id="cancel" name={"Cancel"} />
-      </form>
-      
+      {/* <Button onCLick={submitToDo} />
+      <Button onCLick={submitToDo} /> */}
+      <Button onClick={submitToDo} text={"Submit"} />
+      <Button onClick={cancelToDo} text={"Cancel"} />
+    </form>
   );
 }
