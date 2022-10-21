@@ -1,7 +1,9 @@
 import React from "react";
-import Button from "./button";
 import H2 from "./h2";
 import listInput from "../Modal/Form";
+import DeleteButton from "./DeleteButton";
+import CheckButton from "./CheckButton";
+import EditButton from "./EditButton";
 
 
 
@@ -14,12 +16,13 @@ export default function H2Div(){
 return(
     listInput.map((input) => ( 
         <div className="listItemButton">
-       <Button className="button2"/>
+        <CheckButton className="button2"/>
+        
         <div className="h2div">
         <H2 text={input}/>
         </div> 
-        <Button className="button3"/>
-        <Button className="button1"/>  
+        <EditButton className="button3"/>
+        <DeleteButton className="button1"/>
     </div>
         
              
